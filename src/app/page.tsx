@@ -27,7 +27,16 @@ export default function Home() {
         <Whatsapp color="#ffffff" width={28} height={28} strokeWidth={2} />
       </Link>
 
-      <header className="h-20 w-full flex items-center px-8">Logo</header>
+      <header className="w-full flex items-center p-8">
+        <h1 className="flex flex-col items-start justify-start leading-2">
+          <span className="font-semibold tracking-tight">
+            Central
+          </span>
+          <span className="text-3xl font-extralight tracking-tighter">
+            Reinício
+          </span>
+        </h1>
+      </header>
       {/* Hero Section */}
       <section className="w-full flex flex-col items-start px-8 gap-8">
         <div className="w-full flex flex-col items-start justify-start gap-4">
