@@ -3,8 +3,7 @@ import { Whatsapp } from "iconoir-react";
 import Image from "next/image";
 
 export default function Home() {
-  
-  const fakeNumber = () => {
+  const fakeNumber = function CreateFakeNumber() {
     const dataAtual = new Date();
     const dia = dataAtual.getDate();
 
@@ -13,8 +12,8 @@ export default function Home() {
     const numeroFinal = numeroBase + 4;
 
     return numeroFinal;
-  }
-  
+  };
+
   return (
     <div className="font-outfit w-screen h-screen bg-[#f5faff] text-blue-950">
       {/* Fixed Whatsapp Button */}
@@ -29,14 +28,13 @@ export default function Home() {
 
       <header className="w-full flex items-center p-8">
         <h1 className="flex flex-col items-start justify-start leading-2">
-          <span className="font-semibold tracking-tight">
-            Central
-          </span>
+          <span className="font-semibold tracking-tight">Central</span>
           <span className="text-3xl font-extralight tracking-tighter">
             Reinício
           </span>
         </h1>
       </header>
+
       {/* Hero Section */}
       <section className="w-full flex flex-col items-start px-8 gap-8">
         <div className="w-full flex flex-col items-start justify-start gap-4">
@@ -52,7 +50,9 @@ export default function Home() {
         </div>
 
         <div className="h-7 px-2 flex items-center justify-center border border-teal-600 rounded-lg">
-          <span className="text-sm text-teal-600">*Últimas 0{fakeNumber()} vagas</span>
+          <span className="text-sm text-teal-600">
+            *Últimas 0{fakeNumber()} vagas
+          </span>
         </div>
 
         <div className="relative group w-fit">
