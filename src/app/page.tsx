@@ -3,6 +3,18 @@ import { Whatsapp } from "iconoir-react";
 import Image from "next/image";
 
 export default function Home() {
+  
+  const fakeNumber = () => {
+    const dataAtual = new Date();
+    const dia = dataAtual.getDate();
+
+    const numeroBase = (dia - 1) % 6;
+
+    const numeroFinal = numeroBase + 4;
+
+    return numeroFinal;
+  }
+  
   return (
     <div className="font-outfit w-screen h-screen bg-[#f5faff] text-blue-950">
       {/* Fixed Whatsapp Button */}
@@ -28,6 +40,10 @@ export default function Home() {
             Encontre o recomeço em clínicas de reabilitação de confiança com o
             nosso apoio especializado.
           </p>
+        </div>
+
+        <div className="h-7 px-2 flex items-center justify-center border border-teal-600 rounded-lg">
+          <span className="text-sm text-teal-600">*Últimas 0{fakeNumber()} vagas</span>
         </div>
 
         <div className="relative group w-fit">
