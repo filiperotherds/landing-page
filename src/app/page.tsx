@@ -285,7 +285,7 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-center bg-[#e3e8ec] p-8 gap-8">
         <div className="w-full flex flex-col items-center justify-center gap-3">
           <FaceId
-            className="text-zinc-600"
+            className="text-zinc-500"
             width={38}
             height={38}
             strokeWidth={1.5}
@@ -295,7 +295,7 @@ export default function Home() {
             Tratamento Individualizado
           </h1>
 
-          <p className="text-xs text-zinc-500 text-center">
+          <p className="text-xs text-zinc-700 text-center">
             Entendemos que cada pessoa é única. Por isso, o tratamento é 100%
             focado nas necessidades específicas do paciente, avaliando seu
             histórico de vida e saúde para criar um plano de recuperação mais
@@ -316,7 +316,7 @@ export default function Home() {
 
         <div className="w-full flex flex-col items-center justify-center gap-3">
           <Donate
-            className="text-zinc-600"
+            className="text-zinc-500"
             width={38}
             height={38}
             strokeWidth={1.5}
@@ -326,7 +326,7 @@ export default function Home() {
             Apoio Familiar
           </h1>
 
-          <p className="text-xs text-zinc-500 text-center">
+          <p className="text-xs text-zinc-700 text-center">
             A dependência química afeta toda a família. Oferecemos sessões de
             terapia e grupos de apoio para os familiares, fornecendo as
             ferramentas necessárias para entender o processo, curar as relações
@@ -347,7 +347,7 @@ export default function Home() {
 
         <div className="w-full flex flex-col items-center justify-center gap-3">
           <DeliveryTruck
-            className="text-zinc-600"
+            className="text-zinc-500"
             width={38}
             height={38}
             strokeWidth={1.5}
@@ -357,7 +357,7 @@ export default function Home() {
             Suporte para Remoção 24h
           </h1>
 
-          <p className="text-xs text-zinc-500 text-center">
+          <p className="text-xs text-zinc-700 text-center">
             Em momentos de crise, quando o diálogo não é mais possível, contamos
             com equipes parceiras treinadas para uma abordagem segura, rápida e
             humanizada, garantindo a integridade e o respeito ao paciente
@@ -376,6 +376,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      
       {/* Benefits Section */}
       <section>benefícios section</section>
       {/* FAQ Section */}
