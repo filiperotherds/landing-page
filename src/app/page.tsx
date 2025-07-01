@@ -107,17 +107,16 @@ export default function Home() {
           <Link
             href={url}
             target="_blank"
-            className="relative z-10 h-14 pl-6 pr-2 gap-6 flex flex-row items-center justify-between rounded-2xl bg-orange-500"
+            className="relative z-10 h-14 px-6 gap-3 flex flex-row items-center justify-between rounded-2xl bg-orange-500"
           >
             <span className="text-white font-medium">Entre em Contato!</span>
-            <div className="w-10 h-10 flex items-center justify-center bg-blue-950 rounded-lg">
+            
               <Whatsapp
                 color="#ffffff"
                 width={22}
                 height={22}
                 strokeWidth={2}
               />
-            </div>
           </Link>
         </div>
 
