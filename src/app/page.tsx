@@ -110,13 +110,8 @@ export default function Home() {
             className="relative z-10 h-14 px-6 gap-3 flex flex-row items-center justify-between rounded-2xl bg-orange-500"
           >
             <span className="text-white font-medium">Entre em Contato!</span>
-            
-              <Whatsapp
-                color="#ffffff"
-                width={22}
-                height={22}
-                strokeWidth={2}
-              />
+
+            <Whatsapp color="#ffffff" width={22} height={22} strokeWidth={2} />
           </Link>
         </div>
 

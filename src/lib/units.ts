@@ -3,14 +3,14 @@ const Units = {
         {
             id: 1,
             city: "Rio Claro",
-            displayPhoto: "/placeholder.svg",
+            displayPhoto: "/01-displayPhoto.jpeg",
             hospitalizations: 492,
             rate: 4.97
         },
         {
             id: 2,
             city: "São Roque",
-            displayPhoto: "/placeholder.svg",
+            displayPhoto: "/02-displayPhoto.jpeg",
             hospitalizations: 237,
             rate: 4.78
         },
