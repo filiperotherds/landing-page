@@ -9,10 +9,10 @@ export function Carousel() {
       <div className="max-w-5xl mx-auto">
         <div className="relative overflow-hidden">
           {/* Left fade gradient */}
-          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-zinc-300 to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#e3e8ec] to-transparent z-10"></div>
 
           {/* Right fade gradient */}
-          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-zinc-300 to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#e3e8ec] to-transparent z-10"></div>
 
           <div className="overflow-hidden">
             <div className="logos-slide flex items-center gap-16 whitespace-nowrap">
@@ -60,7 +60,7 @@ export function Carousel() {
 
           <style jsx>{`
             .logos-slide {
-              animation: slide 15s linear infinite;
+              animation: slide 20s linear infinite;
             }
 
             @keyframes slide {

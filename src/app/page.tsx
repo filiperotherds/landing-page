@@ -125,12 +125,12 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="h-22 w-full flex items-center justify-center bg-zinc-300">
+      <section className="h-22 w-full flex items-center justify-center bg-[#e3e8ec]">
         <Carousel />
       </section>
 
       {/* Units Section */}
-      <section className="w-full flex flex-col items-center justify-center py-8 gap-2">
+      <section className="w-full flex flex-col items-center justify-center py-8 gap-8">
         {/* Carousel 1 */}
         <div className="w-full flex flex-col items-start justify-start px-8 gap-4">
           {/* Carousel Header */}
@@ -139,7 +139,7 @@ export default function Home() {
 
             <Link
               href={"/unidades/sao-paulo"}
-              className="font-sans text-sm font-medium text-blue-500"
+              className="font-sans text-sm text-blue-600"
             >
               <div className="flex flex-row items-center justify-center gap-0.5">
                 <span className="pb-0.5">Ver mais</span>
@@ -152,26 +152,115 @@ export default function Home() {
           {/* Carousel Units */}
           <div className="w-full flex flex-row items-center justify-start px-0.5 gap-3 overflow-x-auto flex-nowrap scrollbar-hide">
             {unidadesSaoPaulo.map((unidade) => (
-              <div key={unidade.id} className="flex flex-col items-start justify-start gap-2 flex-shrink-0">
+              <div
+                key={unidade.id}
+                className="flex flex-col items-start justify-start gap-2 flex-shrink-0"
+              >
                 {/* Image Container */}
                 <div className="relative w-38 h-38 rounded-2xl overflow-hidden shadow-md">
                   <div className="z-10 absolute top-3 right-3">
-                    <HeartSolid color={`rgb(0, 0, 0, 0.25)`} stroke="#fff" strokeWidth={2.2}/>
+                    <HeartSolid
+                      color={`rgb(0, 0, 0, 0.25)`}
+                      stroke="#fff"
+                      strokeWidth={2.2}
+                    />
                   </div>
-                  
-                  <Image src={unidade.displayPhoto} alt="Foto Unidade" fill className="object-cover"/>
+
+                  <Image
+                    src={unidade.displayPhoto}
+                    alt="Foto Unidade"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 <div className="w-full flex flex-col items-start justify-start px-1">
-                  <h1 className="text-xs font-semibold text-zinc-800">Unidade em {unidade.city}</h1>
-                  
+                  <h1 className="text-xs font-semibold text-zinc-800">
+                    Unidade em {unidade.city}
+                  </h1>
+
                   <div className="w-full flex flex-row items-center justify-between">
                     <span className="text-xs text-zinc-500">
                       {unidade.hospitalizations} Internações
                     </span>
 
                     <div className="flex flex-row items-center justify-center gap-1">
-                      <StarSolid className="text-yellow-500" width={10} height={10}/>
+                      <StarSolid
+                        className="text-yellow-500"
+                        width={10}
+                        height={10}
+                      />
+
+                      <span className="text-xs text-zinc-500">
+                        {unidade.rate}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Carousel 2 */}
+        <div className="w-full flex flex-col items-start justify-start px-8 gap-4">
+          {/* Carousel Header */}
+          <div className="w-full flex flex-row items-center justify-between">
+            <h1 className="font-bold text-zinc-700">Novos Conveniados</h1>
+
+            <Link
+              href={"/unidades/sao-paulo"}
+              className="font-sans text-sm text-blue-600"
+            >
+              <div className="flex flex-row items-center justify-center gap-0.5">
+                <span className="pb-0.5">Ver mais</span>
+
+                <ChevronRight size={14} strokeWidth={2.5} />
+              </div>
+            </Link>
+          </div>
+
+          {/* Carousel Units */}
+          <div className="w-full flex flex-row items-center justify-start px-0.5 gap-3 overflow-x-auto flex-nowrap scrollbar-hide">
+            {unidadesSaoPaulo.map((unidade) => (
+              <div
+                key={unidade.id}
+                className="flex flex-col items-start justify-start gap-2 flex-shrink-0"
+              >
+                {/* Image Container */}
+                <div className="relative w-38 h-38 rounded-2xl overflow-hidden shadow-md">
+                  <div className="z-10 absolute top-3 right-3">
+                    <HeartSolid
+                      color={`rgb(0, 0, 0, 0.25)`}
+                      stroke="#fff"
+                      strokeWidth={2.2}
+                    />
+                  </div>
+
+                  <Image
+                    src={unidade.displayPhoto}
+                    alt="Foto Unidade"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="w-full flex flex-col items-start justify-start px-1">
+                  <h1 className="text-xs font-semibold text-zinc-800">
+                    Unidade em {unidade.city}
+                  </h1>
+
+                  <div className="w-full flex flex-row items-center justify-between">
+                    <span className="text-xs text-zinc-500">
+                      {unidade.hospitalizations} Internações
+                    </span>
+
+                    <div className="flex flex-row items-center justify-center gap-1">
+                      <StarSolid
+                        className="text-yellow-500"
+                        width={10}
+                        height={10}
+                      />
 
                       <span className="text-xs text-zinc-500">
                         {unidade.rate}
@@ -186,17 +275,98 @@ export default function Home() {
       </section>
 
       {/* Feature Section */}
-      <section className="w-full flex flex-col items-center justify-center p-8 gap-4">
-        <div className="w-full h-48 flex flex-col items-start justify-between border-b border-zinc-300">
-          <div className="w-10 h-10 flex items-center justify-center rounded-tl-full rounded-r-full bg-zinc-200">
-            <FaceId
-              className="text-orange-600"
-              width={24}
-              height={24}
-              strokeWidth={2}
-            />
-          </div>
-          <h1>Ambiente Natural</h1>
+      <section className="w-full flex flex-col items-center justify-center bg-[#e3e8ec] p-8 gap-8">
+        <div className="w-full flex flex-col items-center justify-center gap-2">
+          <FaceId
+            className="text-zinc-600"
+            width={36}
+            height={36}
+            strokeWidth={1.5}
+          />
+
+          <h1 className="font-sans text-zinc-800 font-semibold">
+            Tratamento Individualizado
+          </h1>
+
+          <p className="text-xs text-zinc-500 text-center">
+            Entendemos que cada pessoa é única. Por isso, o tratamento é 100%
+            focado nas necessidades específicas do paciente, avaliando seu
+            histórico de vida e saúde para criar um plano de recuperação mais
+            eficaz e humano.
+          </p>
+
+          <Link
+            href={"/tratamento-individualizado"}
+            className="font-sans text-xs text-blue-600"
+          >
+            <div className="flex flex-row items-center justify-center gap-0.5">
+              <span className="pb-[1px]">Saiba mais</span>
+
+              <ChevronRight size={12} strokeWidth={2.5} />
+            </div>
+          </Link>
+        </div>
+
+        <div className="w-full flex flex-col items-center justify-center gap-2">
+          <FaceId
+            className="text-zinc-600"
+            width={36}
+            height={36}
+            strokeWidth={1.5}
+          />
+
+          <h1 className="font-sans text-zinc-800 font-semibold">
+            Tratamento Individualizado
+          </h1>
+
+          <p className="text-xs text-zinc-500 text-center">
+            Entendemos que cada pessoa é única. Por isso, o tratamento é 100%
+            focado nas necessidades específicas do paciente, avaliando seu
+            histórico de vida e saúde para criar um plano de recuperação mais
+            eficaz e humano.
+          </p>
+
+          <Link
+            href={"/tratamento-individualizado"}
+            className="font-sans text-xs text-blue-600"
+          >
+            <div className="flex flex-row items-center justify-center gap-0.5">
+              <span className="pb-[1px]">Saiba mais</span>
+
+              <ChevronRight size={12} strokeWidth={2.5} />
+            </div>
+          </Link>
+        </div>
+
+        <div className="w-full flex flex-col items-center justify-center gap-2">
+          <FaceId
+            className="text-zinc-600"
+            width={36}
+            height={36}
+            strokeWidth={1.5}
+          />
+
+          <h1 className="font-sans text-zinc-800 font-semibold">
+            Tratamento Individualizado
+          </h1>
+
+          <p className="text-xs text-zinc-500 text-center">
+            Entendemos que cada pessoa é única. Por isso, o tratamento é 100%
+            focado nas necessidades específicas do paciente, avaliando seu
+            histórico de vida e saúde para criar um plano de recuperação mais
+            eficaz e humano.
+          </p>
+
+          <Link
+            href={"/tratamento-individualizado"}
+            className="font-sans text-xs text-blue-600"
+          >
+            <div className="flex flex-row items-center justify-center gap-0.5">
+              <span className="pb-[1px]">Saiba mais</span>
+
+              <ChevronRight size={12} strokeWidth={2.5} />
+            </div>
+          </Link>
         </div>
       </section>
       {/* Benefits Section */}
