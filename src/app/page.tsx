@@ -16,11 +16,13 @@ export default function Home() {
     return numeroFinal;
   };
 
+  const url = `https://wa.me/5518996698064?text=${encodeURI('Olá, vim pela Central Reinício e gostaria de saber mais sobre os serviços!')}`
+
   return (
     <div className="font-outfit w-screen h-full scroll-smooth bg-[#f5faff] text-blue-950">
       {/* Fixed Whatsapp Button */}
       <Link
-        href="https://wa.me/5518996698064?text=Ol%C3%A1%2C%20vim%20pela%20Central%20Rein%C3%ADcio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%21"
+        href={url}
         target="_blank"
         className="fixed bottom-6 right-6 z-50 h-14 w-14 bg-teal-600 rounded-2xl flex items-center justify-center shadow-md"
         aria-label="Entrar em contato pelo WhatsApp"
@@ -87,7 +89,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-transparent border-2 border-teal-600 rounded-2xl translate-y-2 translate-x-2"></div>
 
           <Link
-            href="https://wa.me/5518996698064?text=Ol%C3%A1%2C%20vim%20pela%20Central%20Rein%C3%ADcio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%21"
+            href={url}
             target="_blank"
             className="relative z-10 h-14 pl-6 pr-2 gap-6 flex flex-row items-center justify-between rounded-2xl bg-orange-500"
           >
