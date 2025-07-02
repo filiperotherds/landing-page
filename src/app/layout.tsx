@@ -19,7 +19,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Central Reinício - Clínicas de Reabilitação",
+  title: "Grupo AF - Clínicas de Reabilitação",
   description: "Clínicas de Reabilitação para Adictos.",
 };
 
