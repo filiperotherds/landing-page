@@ -7,10 +7,9 @@ import {
   FaceId,
   HeartSolid,
   StarSolid,
-  Whatsapp,
   WhatsappSolid,
 } from "iconoir-react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Squircle } from "lucide-react";
 
 import { Carousel } from "@/components/carousel";
 import { Units } from "@/lib/units";
@@ -47,12 +46,22 @@ export default function Home() {
         <WhatsappSolid color="#ffffff" width={28} height={28} strokeWidth={2} />
       </Link>
 
-      <header className="w-full flex flex-row items-center gap-2 p-8">
-        <h1 className="flex flex-col items-start justify-start leading-2">
-          <span className="text-3xl font-extralight tracking-tighter">
-            Grupo AF
-          </span>
-        </h1>
+      <header className="w-full p-8">
+        <div className="flex flex-row items-center justify-start gap-2">
+          <div className="relative w-16 h-16 flex items-center justify-center">
+            <Squircle size={64} className="z-0 absolute" />
+            <span className="relative font-dm-serif text-3xl font-bold tracking-tighter">
+              AF
+            </span>
+          </div>
+
+          <div className="flex flex-col items-start justify-start">
+            <span className="font-semibold">Grupo AF</span>
+            <span className="text-orange-500 font-medium">
+              Clínicas de Reabilitação
+            </span>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
@@ -85,7 +94,12 @@ export default function Home() {
           >
             <span className="text-white font-medium">Entre em Contato!</span>
 
-            <WhatsappSolid color="#ffffff" width={22} height={22} strokeWidth={2} />
+            <WhatsappSolid
+              color="#ffffff"
+              width={22}
+              height={22}
+              strokeWidth={2}
+            />
           </Link>
         </div>
 
@@ -362,13 +376,16 @@ export default function Home() {
           >
             <span className="text-white font-medium">Entre em Contato!</span>
 
-            <WhatsappSolid color="#ffffff" width={22} height={22} strokeWidth={2} />
+            <WhatsappSolid
+              color="#ffffff"
+              width={22}
+              height={22}
+              strokeWidth={2}
+            />
           </Link>
         </div>
 
-        <div className="relative w-full flex flex-col items-start ">
-
-        </div>
+        <div className="relative w-full flex flex-col items-start "></div>
       </section>
 
       {/* FAQ Section */}
