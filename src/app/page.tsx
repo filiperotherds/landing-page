@@ -9,10 +9,12 @@ import {
   StarSolid,
   WhatsappSolid,
 } from "iconoir-react";
-import { ChevronRight, Squircle } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { Carousel } from "@/components/carousel";
-import { Units } from "@/lib/units";
+import { Units, Treatments } from "@/lib/data";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   function CreateFakeNumber() {
@@ -46,23 +48,7 @@ export default function Home() {
         <WhatsappSolid color="#ffffff" width={28} height={28} strokeWidth={2} />
       </Link>
 
-      <header className="w-full p-8">
-        <div className="flex flex-row items-center justify-start gap-2">
-          <div className="relative w-16 h-16 flex items-center justify-center">
-            <Squircle size={64} className="z-0 absolute" />
-            <span className="relative font-dm-serif text-3xl font-bold tracking-tighter">
-              AF
-            </span>
-          </div>
-
-          <div className="flex flex-col items-start justify-start">
-            <span className="font-semibold">Grupo AF</span>
-            <span className="text-orange-500 font-medium">
-              Clínicas de Reabilitação
-            </span>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="w-full flex flex-col items-start px-8 gap-8">
@@ -361,37 +347,54 @@ export default function Home() {
 
       {/* Tratamentos Section */}
       <section className="w-full flex flex-col items-center justify-center p-8 gap-8">
-        <h1 className="text-center text-2xl">
-          Conheça os tratamentos <br /> oferecidos pelo{" "}
-          <span className="font-bold">Grupo AF</span>
-        </h1>
+        <div className="relative w-full flex flex-col items-start gap-4">
+          <div className="w-full flex flex-row items-center justify-center gap-4">
+            <Link
+              href={url}
+              target="_blank"
+              className="min-w-28 h-28 flex flex-col items-start justify-between rounded-2xl p-4 bg-orange-500"
+            >
+              <WhatsappSolid
+                color="#ffffff"
+                width={22}
+                height={22}
+                strokeWidth={2}
+              />
 
-        <div className="relative group w-fit">
-          <div className="absolute inset-0 bg-transparent border-2 border-teal-600 rounded-2xl translate-y-2 translate-x-2"></div>
+              <div className="flex flex-col items-start justify-start">
+                <h1 className="text-white font-semibold text-sm">Whatsapp</h1>
 
-          <Link
-            href={url}
-            target="_blank"
-            className="relative z-10 h-14 px-6 gap-3 flex flex-row items-center justify-between rounded-2xl bg-orange-500"
-          >
-            <span className="text-white font-medium">Entre em Contato!</span>
+                <p className="text-white text-xs">Entre em contato</p>
+              </div>
+            </Link>
 
-            <WhatsappSolid
-              color="#ffffff"
-              width={22}
-              height={22}
-              strokeWidth={2}
-            />
-          </Link>
+            <div className="w-full h-28 flex flex-col justify-between bg-[#e3e8ec] rounded-2xl p-4">
+              <h1 className="text-xl font-semibold">Nossos Tratamentos</h1>
+
+              <p className="text-xs">
+                Encontre os tratamentos que já ajudaram milhares de famílias.
+              </p>
+            </div>
+          </div>
+
+          {Treatments.map((treatment) => (
+            <div key={treatment.id} className="w-full flex flex-col items-start justify-between bg-[#e3e8ec] rounded-xl p-4 gap-8">
+              <h1 className="text-4xl font-sans font-extralight">{treatment.h1}</h1>
+
+              <div className="flex flex-col items-start gap-2">
+                <h2 className="font-semibold">{treatment.h2}</h2>
+
+                <p className="text-sm">
+                  {treatment.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-
-        <div className="relative w-full flex flex-col items-start "></div>
       </section>
 
-      {/* FAQ Section */}
-      <section>FAQ section</section>
       {/* Footer Section */}
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 }
