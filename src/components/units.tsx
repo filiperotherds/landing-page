@@ -34,7 +34,8 @@ export default function Units() {
         {/* Carousel Units */}
         <div className="w-full flex flex-row items-center justify-start px-0.5 gap-3 overflow-x-auto flex-nowrap scrollbar-hide">
           {Unidades.map((unidade) => (
-            <div
+            <Link
+              href={`/unidades/${unidade.slug}`}
               key={unidade.id}
               className="flex flex-col items-start justify-start gap-2 flex-shrink-0"
             >
@@ -79,7 +80,7 @@ export default function Units() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
