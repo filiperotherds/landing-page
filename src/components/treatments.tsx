@@ -6,8 +6,23 @@ import { Treatments as TreatmentsData } from "@/lib/data";
 export default function Treatments() {
   return (
     <section className="w-full flex flex-col items-center justify-center p-8 gap-8">
+      <div className="w-full flex flex-col items-start justify-start">
+        <h1 className="text-3xl font-bold">Tratamentos</h1>
+        <p className="text-sm text-orange-500">
+          Conheça os métodos dos nossos tratamentos.
+        </p>
+      </div>
+
       <div className="relative w-full flex flex-col items-start gap-4">
         <div className="w-full flex flex-row items-center justify-center gap-4">
+          <div className="w-full h-28 flex flex-col justify-between bg-[#e3e8ec] rounded-2xl p-4">
+            <h1 className="text-xl font-semibold">Nossos Tratamentos</h1>
+
+            <p className="text-xs">
+              Encontre os tratamentos que já ajudaram milhares de famílias.
+            </p>
+          </div>
+
           <Link
             href={url}
             target="_blank"
@@ -26,14 +41,6 @@ export default function Treatments() {
               <p className="text-white text-xs">Entre em contato</p>
             </div>
           </Link>
-
-          <div className="w-full h-28 flex flex-col justify-between bg-[#e3e8ec] rounded-2xl p-4">
-            <h1 className="text-xl font-semibold">Nossos Tratamentos</h1>
-
-            <p className="text-xs">
-              Encontre os tratamentos que já ajudaram milhares de famílias.
-            </p>
-          </div>
         </div>
 
         {TreatmentsData.map((treatment) => (

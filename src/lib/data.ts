@@ -1,46 +1,48 @@
-// Data File for Units and Treatments
+interface Unidade {
+  id: number;
+  slug: string;
+  city: string;
+  displayPhoto: string;
+  hospitalizations: number;
+  rate: number;
+}
 
-const Units = {
-  SaoPaulo: [
-    {
-      id: 1,
-      city: "Rio Claro",
-      displayPhoto: "/01-displayPhoto.jpeg",
-      hospitalizations: 492,
-      rate: 4.97,
-    },
-    {
-      id: 2,
-      city: "São Roque",
-      displayPhoto: "/02-displayPhoto.jpeg",
-      hospitalizations: 237,
-      rate: 4.78,
-    },
-    {
-      id: 3,
-      city: "Alambari",
-      displayPhoto: "/placeholder.svg",
-      hospitalizations: 341,
-      rate: 4.83,
-    },
-    {
-      id: 4,
-      city: "Ibaté",
-      displayPhoto: "/placeholder.svg",
-      hospitalizations: 221,
-      rate: 4.91,
-    },
-  ],
-};
+const Unidades: Unidade[] = [
+  {
+    id: 428462,
+    slug: "rio-claro",
+    city: "Rio Claro",
+    displayPhoto: "/01-displayPhoto.jpeg",
+    hospitalizations: 492,
+    rate: 4.97,
+  },
+  {
+    id: 428463,
+    slug: "sao-roque",
+    city: "São Roque",
+    displayPhoto: "/02-displayPhoto.jpeg",
+    hospitalizations: 237,
+    rate: 4.78,
+  },
+  {
+    id: 428464,
+    slug: "alambari",
+    city: "Alambari",
+    displayPhoto: "/placeholder.svg",
+    hospitalizations: 341,
+    rate: 4.83,
+  },
+  {
+    id: 428465,
+    city: "Ibaté",
+    slug: "ibate",
+    displayPhoto: "/placeholder.svg",
+    hospitalizations: 221,
+    rate: 4.91,
+  },
+];
 
 const Treatments = [
-  {
-    id: 0,
-    h1: "Avaliação",
-    h2: "Avaliação Inicial Completa",
-    description:
-      "Através de uma avaliação 360°, confidencial e humana, compreendemos sua história completa para desenhar um plano de tratamento exclusivo, focado em suas necessidades reais.",
-  },
   {
     id: 1,
     h1: "Álcool",
@@ -64,7 +66,7 @@ const Treatments = [
   },
 ];
 
-const fakeNumber = (() => {
+const fakeNumber = () => {
   const dataAtual = new Date();
   const dia = dataAtual.getDate();
 
@@ -73,10 +75,11 @@ const fakeNumber = (() => {
   const numeroFinal = numeroBase + 4;
 
   return numeroFinal;
-});
+};
 
 const url = `https://wa.me/5518996698064?text=${encodeURI(
   "Olá, gostaria de saber mais sobre os serviços do Grupo AF!"
 )}`;
 
-export { Units, Treatments, fakeNumber, url };
+export { Unidades, Treatments, fakeNumber, url };
+export type { Unidade };

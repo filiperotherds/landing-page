@@ -2,11 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { HeartSolid, StarSolid } from "iconoir-react";
-import { Units as UnitsData } from "@/lib/data";
+import { Unidades } from "@/lib/data";
 
 export default function Units() {
   return (
     <section className="w-full flex flex-col items-center justify-center py-8 gap-8">
+      <div className="w-full flex flex-col items-start justify-start px-8">
+        <h1 className="text-3xl font-bold">Unidades</h1>
+        <p className="text-sm text-orange-500">
+          Conheça nossas unidades de saúde conveniadas.
+        </p>
+      </div>
       {/* Carousel 1 */}
       <div className="w-full flex flex-col items-start justify-start px-8 gap-4">
         {/* Carousel Header */}
@@ -27,7 +33,7 @@ export default function Units() {
 
         {/* Carousel Units */}
         <div className="w-full flex flex-row items-center justify-start px-0.5 gap-3 overflow-x-auto flex-nowrap scrollbar-hide">
-          {UnitsData.SaoPaulo.map((unidade) => (
+          {Unidades.map((unidade) => (
             <div
               key={unidade.id}
               className="flex flex-col items-start justify-start gap-2 flex-shrink-0"
@@ -98,7 +104,7 @@ export default function Units() {
 
         {/* Carousel Units */}
         <div className="w-full flex flex-row items-center justify-start px-0.5 gap-3 overflow-x-auto flex-nowrap scrollbar-hide">
-          {UnitsData.SaoPaulo.map((unidade) => (
+          {Unidades.map((unidade) => (
             <div
               key={unidade.id}
               className="flex flex-col items-start justify-start gap-2 flex-shrink-0"
