@@ -17,7 +17,7 @@ export default function Home() {
       </div>
 
       {/* Mobile Screen */}
-      <div className="flex sm:hidden font-outfit w-screen h-full scroll-smooth bg-[#f5faff] text-blue-950">
+      <div className="flex flex-col items-start justify-start sm:hidden font-outfit w-screen h-full scroll-smooth bg-[#f5faff] text-blue-950">
         {/* Fixed Whatsapp Button */}
         <FixedButton />
 
