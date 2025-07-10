@@ -55,10 +55,12 @@ export default function Unidades() {
         <h1 className="font-semibold px-8 pb-4">Unidades em São Paulo</h1>
 
         {/* Units Section */}
-        <div className="grid grid-cols-2 gap-8 px-8 pb-8">
-          {dataUnidades.map((unidade) => (
-            <CardUnit key={unidade.id} unidade={unidade} />
-          ))}
+        <div className="w-full flex items-center justify-center px-8 pb-8">
+          <div className="grid grid-cols-2 gap-8">
+            {dataUnidades.map((unidade) => (
+              <CardUnit key={unidade.id} unidade={unidade} />
+            ))}
+          </div>
         </div>
       </div>
     </>
