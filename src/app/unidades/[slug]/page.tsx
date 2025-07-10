@@ -8,12 +8,15 @@ import Link from "next/link";
 import Header from "@/components/header";
 import { StarSolid, WhatsappSolid } from "iconoir-react";
 import Footer from "@/components/footer";
+import { useRouter } from "next/navigation";
+import { ChevronLeft } from "lucide-react";
 
 export default function Page({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  const router = useRouter();
   const { slug } = use(params);
   const unidade = Unidades.find((u) => u.slug === slug);
 
@@ -28,9 +31,17 @@ export default function Page({
   )}`;
 
   return (
-    <div className="flex flex-col items-start justify-start sm:hidden font-outfit w-screen h-full scroll-smooth bg-[#f5faff] text-blue-950">
+    <div className="flex flex-col items-start justify-start sm:hidden font-outfit w-screen h-full scroll-smooth">
       {/* Header Section */}
       <Header />
+
+      <div className="w-full flex items-start justify-start px-8 pb-8">
+        <button type="button" onClick={() => router.back()} className="flex flex-row items-center justify-center gap-1">
+          <ChevronLeft size={20}/>
+
+          <span>Voltar</span>
+        </button>
+      </div>
 
       <div className="w-full flex flex-row items-center justify-start px-8 pb-8 gap-4 rounded-2xl overflow-x-auto flex-nowrap scrollbar-hide">
         {placeholderAray.map((num) => (

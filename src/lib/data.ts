@@ -1,3 +1,12 @@
+export interface Unidade {
+  id: number;
+  slug: string;
+  city: string;
+  displayPhoto: string;
+  hospitalizations: number;
+  rate: number;
+}
+
 const Unidades = [
   {
     id: 428462,

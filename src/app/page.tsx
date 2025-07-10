@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       {/* Desktop Screen */}
-      <div className="hidden sm:flex w-screen h-screen items-center justify-center font-outfit bg-[#f5faff] text-blue-950">
+      <div className="hidden sm:flex w-screen h-screen items-center justify-center font-outfit">
         <UnderConstruction/>
       </div>
 
       {/* Mobile Screen */}
-      <div className="flex flex-col items-start justify-start sm:hidden font-outfit w-screen h-full scroll-smooth bg-[#f5faff] text-blue-950">
+      <div className="flex flex-col items-start justify-start sm:hidden font-outfit w-screen h-full scroll-smooth">
         {/* Fixed Whatsapp Button */}
         <FixedButton />
 
