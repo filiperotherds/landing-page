@@ -1,15 +1,14 @@
 "use client";
 
 import { Unidades } from "@/lib/data";
-import { notFound } from "next/navigation";
 import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound, useRouter } from "next/navigation";
 import Header from "@/components/header";
-import { StarSolid, WhatsappSolid } from "iconoir-react";
 import Footer from "@/components/footer";
-import { useRouter } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
+import { StarSolid, WhatsappSolid } from "iconoir-react";
 
 export default function Page({
   params,
