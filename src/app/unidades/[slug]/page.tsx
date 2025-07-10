@@ -6,7 +6,7 @@ import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/header";
-import { StarSolid, Whatsapp, WhatsappSolid } from "iconoir-react";
+import { StarSolid, WhatsappSolid } from "iconoir-react";
 import Footer from "@/components/footer";
 
 export default function Page({
