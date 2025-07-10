@@ -1,101 +1,62 @@
 import { DeliveryTruck, Donate, FaceId } from "iconoir-react";
-import { ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Feature() {
   return (
     <section className="w-full flex flex-col items-center justify-center bg-[#e3e8ec] p-8 gap-8">
-      <div className="w-full flex flex-col items-center justify-center gap-3">
-        <FaceId
-          className="text-zinc-500"
-          width={38}
-          height={38}
-          strokeWidth={1.5}
-        />
-
-        <h1 className="font-sans text-zinc-800 font-semibold">
-          Tratamento Individualizado
-        </h1>
-
-        <p className="text-[13px] text-zinc-700 text-center">
-          Entendemos que cada pessoa é única. Por isso, o tratamento é 100%
-          focado nas necessidades específicas do paciente, avaliando seu
-          histórico de vida e saúde para criar um plano de recuperação mais
-          eficaz e humano.
-        </p>
-
-        <Link
-          href={"/tratamento-individualizado"}
-          className="font-sans text-xs text-blue-600"
-        >
-          <div className="flex flex-row items-center justify-center gap-0.5">
-            <span className="pb-[1px]">Saiba mais</span>
-
-            <ChevronRight size={12} strokeWidth={2.5} />
+      <div className="w-full flex flex-col gap-4">
+        <div className="w-full flex flex-row items-center justify-between">
+          <div className="w-full flex flex-col items-start justify-start">
+            <h1 className="text-3xl font-bold">Resgates</h1>
+            <p className="text-sm text-orange-500">
+              Conheça nosso suporte para resgates.
+            </p>
           </div>
-        </Link>
-      </div>
 
-      <div className="w-full flex flex-col items-center justify-center gap-3">
-        <Donate
-          className="text-zinc-500"
-          width={38}
-          height={38}
-          strokeWidth={1.5}
-        />
+          <Link href={`/remocao`}>
+            <ArrowUpRight size={32} strokeWidth={2.5} />
+          </Link>
+        </div>
 
-        <h1 className="font-sans text-zinc-800 font-semibold">
-          Apoio Familiar
-        </h1>
+        <div className="w-full flex flex-row items-center justify-center gap-4">
+          <div className="w-full h-32 flex flex-col items-start justify-between bg-[#f5faff] rounded-2xl p-4">
+            <div className="w-full h-full flex flex-col items-start justify-between">
+              <div className="p-1.5 rounded-lg bg-[#e3e8ec]">
+                <DeliveryTruck
+                  className="text-zinc-500"
+                  width={28}
+                  height={28}
+                  strokeWidth={1.5}
+                />
+              </div>
 
-        <p className="text-[13px] text-zinc-700 text-center">
-          A dependência química afeta toda a família. Oferecemos sessões de
-          terapia e grupos de apoio para os familiares, fornecendo as
-          ferramentas necessárias para entender o processo, curar as relações e
-          ajudar na prevenção de recaídas.
-        </p>
-
-        <Link
-          href={"/apoio-familiar"}
-          className="font-sans text-xs text-blue-600"
-        >
-          <div className="flex flex-row items-center justify-center gap-0.5">
-            <span className="pb-[1px]">Saiba mais</span>
-
-            <ChevronRight size={12} strokeWidth={2.5} />
+              <h1 className="text-lg font-semibold">Suporte para Remoção</h1>
+            </div>
           </div>
-        </Link>
-      </div>
 
-      <div className="w-full flex flex-col items-center justify-center gap-3">
-        <DeliveryTruck
-          className="text-zinc-500"
-          width={38}
-          height={38}
-          strokeWidth={1.5}
-        />
-
-        <h1 className="font-sans text-zinc-800 font-semibold">
-          Suporte para Remoção 24h
-        </h1>
-
-        <p className="text-[13px] text-zinc-700 text-center">
-          Em momentos de crise, quando o diálogo não é mais possível, contamos
-          com equipes parceiras treinadas para uma abordagem segura, rápida e
-          humanizada, garantindo a integridade e o respeito ao paciente durante
-          o transporte até a clínica.
-        </p>
-
-        <Link
-          href={"/tratamento-individualizado"}
-          className="font-sans text-xs text-blue-600"
-        >
-          <div className="flex flex-row items-center justify-center gap-0.5">
-            <span className="pb-[1px]">Saiba mais</span>
-
-            <ChevronRight size={12} strokeWidth={2.5} />
+          <div className="min-w-28 h-32 flex flex-col items-start justify-end bg-teal-600 rounded-2xl p-4">
+            <h1 className="text-4xl font-bold text-white">24h</h1>
           </div>
-        </Link>
+        </div>
+
+        <div className="w-full h-32 flex flex-row items-end justify-between bg-[#f5faff] rounded-2xl p-4 gap-4">
+          <div className="relative h-24 min-w-24 rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={"/map.png"}
+              alt="Mapa"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+
+          <p className="text-xs text-zinc-800 text-start">
+            Equipes treinadas para uma abordagem segura, rápida e humanizada,
+            garantindo a integridade e o respeito ao paciente durante o
+            transporte até a clínica.
+          </p>
+        </div>
       </div>
     </section>
   );

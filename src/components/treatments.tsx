@@ -2,6 +2,7 @@ import { url } from "@/lib/data";
 import { WhatsappSolid } from "iconoir-react";
 import Link from "next/link";
 import { Treatments as TreatmentsData } from "@/lib/data";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Treatments() {
   return (
@@ -44,20 +45,21 @@ export default function Treatments() {
         </div>
 
         {TreatmentsData.map((treatment) => (
-          <div
+          <Link
+            href={`/tratamentos/${treatment.slug}`}
             key={treatment.id}
-            className="w-full flex flex-col items-start justify-between bg-[#e3e8ec] rounded-xl p-4 gap-8"
+            className="w-full flex flex-col items-start justify-between bg-[#e3e8ec] rounded-3xl p-4 gap-8"
           >
-            <h1 className="text-4xl font-sans font-extralight">
-              {treatment.h1}
-            </h1>
+            <div className="w-full flex flex-row items-start justify-between">
+              <h1 className="text-3xl font-bold max-w-3/4">{treatment.h1}</h1>
 
-            <div className="flex flex-col items-start gap-2">
-              <h2 className="font-semibold">{treatment.h2}</h2>
-
-              <p className="text-sm">{treatment.description}</p>
+              <div className="p-1.5 rounded-xl bg-[#f5faff]">
+                <ArrowUpRight size={32} strokeWidth={2.5} />
+              </div>
             </div>
-          </div>
+
+            <p className="text-sm">{treatment.description}</p>
+          </Link>
         ))}
       </div>
     </section>

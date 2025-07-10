@@ -1,13 +1,4 @@
-interface Unidade {
-  id: number;
-  slug: string;
-  city: string;
-  displayPhoto: string;
-  hospitalizations: number;
-  rate: number;
-}
-
-const Unidades: Unidade[] = [
+const Unidades = [
   {
     id: 428462,
     slug: "rio-claro",
@@ -45,24 +36,24 @@ const Unidades: Unidade[] = [
 const Treatments = [
   {
     id: 1,
+    slug: "alcool",
     h1: "Álcool",
-    h2: "Tratamento para Alcoolismo",
     description:
-      "Nosso tratamento especializado para o alcoolismo foca em desvendar os gatilhos do consumo, tratar as questões emocionais subjacentes e reconstruir uma rotina saudável. Com suporte médico, terapia cognitivo-comportamental e grupos de apoio, ajudamos você a reencontrar o prazer de viver sem a necessidade do álcool.",
+      "Tratamento especializado para o alcoolismo focado em desvendar os gatilhos do consumo e tratar as questões emocionais subjacentes.",
   },
   {
     id: 2,
+    slug: "dependencia-quimica",
     h1: "Dependência Química",
-    h2: "Tratamento para Dependência Química",
     description:
-      "Seja qual for a substância — cocaína, crack, maconha, opióides ou medicamentos controlados — existe um caminho de volta. Nossa abordagem integrada trata não apenas o uso da droga, mas principalmente as raízes do vício. Ajudamos o paciente a desenvolver novas habilidades de enfrentamento, a restaurar a autoestima e a consertar os laços familiares, criando uma base sólida para uma vida livre de drogas.",
+      "Programa de recuperação para a dependência química focado em interromper o ciclo do uso compulsivo e desenvolver novas habilidades de enfrentamento.",
   },
   {
     id: 3,
+    slug: "vicio-em-jogos",
     h1: "Vício em Jogos",
-    h2: "Tratamento para Vício em Jogos",
     description:
-      "A dependência de jogos, apostas online e outras compulsões comportamentais pode ser tão devastadora quanto a dependência química. O tratamento foca em terapia cognitivo-comportamental (TCC) para identificar e modificar os padrões de pensamento que levam ao jogo compulsivo.",
+      "Terapia especializada para o vício em jogos focada em controlar os impulsos compulsivos e reestruturar os padrões de pensamento e comportamento.",
   },
 ];
 
@@ -82,4 +73,3 @@ const url = `https://wa.me/5518996698064?text=${encodeURI(
 )}`;
 
 export { Unidades, Treatments, fakeNumber, url };
-export type { Unidade };
