@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { HeartSolid, StarSolid } from "iconoir-react";
 import { Unidades } from "@/lib/data";
 

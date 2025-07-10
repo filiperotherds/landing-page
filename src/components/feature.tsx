@@ -1,5 +1,5 @@
-import { DeliveryTruck, Donate, FaceId } from "iconoir-react";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { DeliveryTruck } from "iconoir-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
