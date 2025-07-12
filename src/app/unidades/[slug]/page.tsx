@@ -35,8 +35,12 @@ export default function Page({
       <Header />
 
       <div className="w-full flex items-start justify-start px-8 pb-8">
-        <button type="button" onClick={() => router.back()} className="flex flex-row items-center justify-center gap-1">
-          <ChevronLeft size={20}/>
+        <button
+          type="button"
+          onClick={() => router.back()}
+          className="flex flex-row items-center justify-center gap-1"
+        >
+          <ChevronLeft size={20} />
 
           <span>Voltar</span>
         </button>
