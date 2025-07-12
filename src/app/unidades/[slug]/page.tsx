@@ -47,7 +47,7 @@ export default function Page({
       </div>
 
       <div className="w-full flex flex-row items-center justify-start px-8 pb-8 gap-4 rounded-2xl overflow-x-auto flex-nowrap scrollbar-hide">
-        {placeholderAray.map((num) => (
+        {unidade.map((num) => (
           <div
             key={num}
             className="relative w-full aspect-square rounded-3xl overflow-hidden flex-shrink-0"
