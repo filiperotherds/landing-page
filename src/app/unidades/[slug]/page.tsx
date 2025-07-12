@@ -1,6 +1,7 @@
 import { Unidades } from "@/lib/data";
 import { notFound } from "next/navigation";
 import UnidadeClientPage from "@/components/unidade-client-page";
+import { use } from "react";
 
 import fs from "fs";
 import path from "path";
@@ -13,13 +14,20 @@ const getImagesForUnidade = (slug: string): string[] => {
       .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
       .map((file) => `/unidades/${slug}/${file}`);
   } catch (error) {
-    console.error(`Diretório de imagens não encontrado para a unidade "${slug}":`, error);
+    console.error(
+      `Diretório de imagens não encontrado para a unidade "${slug}":`,
+      error
+    );
     return [];
   }
 };
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = use(params);
   const unidade = Unidades.find((u) => u.slug === slug);
 
   if (!unidade) {
