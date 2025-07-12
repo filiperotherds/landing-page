@@ -9,15 +9,7 @@ export interface Unidade {
 
 const Unidades = [
   {
-    id: 428462,
-    slug: "rio-claro",
-    city: "Rio Claro",
-    displayPhoto: "/01-displayPhoto.jpeg",
-    hospitalizations: 492,
-    rate: 4.97,
-  },
-  {
-    id: 428463,
+    id: 1,
     slug: "sao-roque",
     city: "São Roque",
     displayPhoto: "/02-displayPhoto.jpeg",
@@ -25,20 +17,28 @@ const Unidades = [
     rate: 4.78,
   },
   {
-    id: 428464,
+    id: 2,
+    city: "Ibaté",
+    slug: "ibate",
+    displayPhoto: "/03-displayPhoto.jpeg",
+    hospitalizations: 221,
+    rate: 4.91,
+  },
+  {
+    id: 3,
+    slug: "rio-claro",
+    city: "Rio Claro",
+    displayPhoto: "/01-displayPhoto.jpeg",
+    hospitalizations: 492,
+    rate: 4.97,
+  },
+  {
+    id: 4,
     slug: "alambari",
     city: "Alambari",
     displayPhoto: "/placeholder.svg",
     hospitalizations: 341,
     rate: 4.83,
-  },
-  {
-    id: 428465,
-    city: "Ibaté",
-    slug: "ibate",
-    displayPhoto: "/placeholder.svg",
-    hospitalizations: 221,
-    rate: 4.91,
   },
 ];
 

@@ -1,5 +1,3 @@
-// src/app/unidades/[slug]/page.tsx
-
 import { Unidades } from "@/lib/data";
 import { notFound } from "next/navigation";
 import UnidadeClientPage from "@/components/unidade-client-page";

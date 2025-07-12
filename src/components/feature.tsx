@@ -7,17 +7,11 @@ export default function Feature() {
   return (
     <section className="w-full flex flex-col items-center justify-center bg-[#e3e8ec] p-8 gap-8">
       <div className="w-full flex flex-col gap-4">
-        <div className="w-full flex flex-row items-center justify-between">
-          <div className="w-full flex flex-col items-start justify-start">
-            <h1 className="text-3xl font-bold">Resgates</h1>
-            <p className="text-sm text-orange-500">
-              Conheça nosso suporte para resgates.
-            </p>
-          </div>
-
-          <Link href={`/remocao`}>
-            <ArrowUpRight size={32} strokeWidth={2.5} />
-          </Link>
+        <div className="w-full flex flex-col items-start justify-start">
+          <h1 className="text-3xl font-bold">Resgates</h1>
+          <p className="text-sm text-orange-500">
+            Conheça nosso suporte para resgates.
+          </p>
         </div>
 
         <div className="w-full flex flex-row items-center justify-center gap-4">
