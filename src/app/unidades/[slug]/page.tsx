@@ -19,7 +19,7 @@ const getImagesForUnidade = (slug: string): string[] => {
       .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
       .map((file) => `/unidades/${slug}/${file}`);
   } catch (error) {
-    console.error(`Diretório de imagens não encontrado para a unidade "${slug}"`);
+    console.error(`Diretório de imagens não encontrado para a unidade "${slug}": `, error);
     return [];
   }
 };
