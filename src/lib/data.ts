@@ -15,7 +15,6 @@ const Unidades = [
     displayPhoto: "/01-displayPhoto.jpeg",
     hospitalizations: 492,
     rate: 4.97,
-    imgArray: 8,
   },
   {
     id: 428463,
@@ -24,7 +23,6 @@ const Unidades = [
     displayPhoto: "/02-displayPhoto.jpeg",
     hospitalizations: 237,
     rate: 4.78,
-    arraySize: 12,
   },
   {
     id: 428464,

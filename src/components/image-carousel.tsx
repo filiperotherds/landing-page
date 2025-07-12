@@ -52,7 +52,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         <>
           <button
             onClick={goToPrevious}
-            className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus:outline-none"
+            className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black/65 bg-opacity-40 text-white p-1.5 rounded-full focus:outline-none"
             aria-label="Imagem anterior"
           >
             <ChevronLeft size={24} />
@@ -60,7 +60,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
 
           <button
             onClick={goToNext}
-            className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus:outline-none"
+            className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black/65 bg-opacity-40 text-white p-1.5 rounded-full focus:outline-none"
             aria-label="Próxima imagem"
           >
             <ChevronRight size={24} />
